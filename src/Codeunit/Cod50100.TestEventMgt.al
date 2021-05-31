@@ -21,6 +21,7 @@ begin
     TotalSalesLine.SetFilter("Line No.",'<>%1',Rec."Line No.");
     TotalSalesLine.CalcSums("Amount Including VAT");
     TotalSalesLine."Amount Including VAT" += Rec."Amount Including VAT";
+    
     if not GeneralLedgerSetup.get() then 
         GeneralLedgerSetup.Insert(true);
 
