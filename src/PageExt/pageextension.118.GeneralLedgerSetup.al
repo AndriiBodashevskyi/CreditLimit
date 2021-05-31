@@ -4,7 +4,7 @@ pageextension 50100 "Test General Ledger Setup Ext" extends "General Ledger Setu
     {
         addlast(General)
         { 
-            field("Trigger Credit Limit"; Rec."Trigger Credit Limit")
+            field("Test Trigger Credit Limit"; Rec."Test Trigger Credit Limit")
             {
                 ToolTip = 'Specifies the value of the Trigger Credit Limit field';
                 ApplicationArea = All;
