@@ -21,7 +21,11 @@ begin
     TotalSalesLine.SetFilter("Line No.",'<>%1',Rec."Line No.");
     TotalSalesLine.CalcSums("Amount Including VAT");
     TotalSalesLine."Amount Including VAT" += Rec."Amount Including VAT";
-    
+
+    if TotalSalesLine."Amount Including VAT" <= Customer."Credit Limit (LCY)" then
+        exit;
+
+    // Get setup for find Test Trigger Credit Limit
     if not GeneralLedgerSetup.get() then 
         GeneralLedgerSetup.Insert(true);
 
