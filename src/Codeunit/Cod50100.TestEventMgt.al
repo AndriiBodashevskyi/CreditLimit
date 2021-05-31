@@ -24,11 +24,11 @@ begin
     if not GeneralLedgerSetup.get() then 
         GeneralLedgerSetup.Insert(true);
 
-    case GeneralLedgerSetup."Trigger Credit Limit" of
-        GeneralLedgerSetup."Trigger Credit Limit"::"Show Message":
+    case GeneralLedgerSetup."Test Trigger Credit Limit" of
+        GeneralLedgerSetup."Test Trigger Credit Limit"::"Show Message":
             Message(CreditLimitLbl, TotalSalesLine."Amount Including VAT", Customer."Credit Limit (LCY)", Rec."Bill-to Customer No.");
                 
-        GeneralLedgerSetup."Trigger Credit Limit"::"Show Error":
+        GeneralLedgerSetup."Test Trigger Credit Limit"::"Show Error":
             Error(CreditLimitLbl, TotalSalesLine."Amount Including VAT", Customer."Credit Limit (LCY)", Rec."Bill-to Customer No.");
                 
     end;
