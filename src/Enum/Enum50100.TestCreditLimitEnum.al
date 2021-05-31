@@ -1,4 +1,4 @@
-enum 50101 "Test CreditLimitEnum"
+enum 50100 "Test CreditLimitEnum"
 {
     Extensible = true;
     
